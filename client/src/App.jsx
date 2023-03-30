@@ -1,9 +1,9 @@
 import { useEffect, useState, useRef } from 'react'
-import CardsArray from './CardsArray';
+import CardsArray from './components/CardsArray';
 import ShuffleCards from './components/Shuffle';
-import Card from './components/Card';
+import GameCard from './components/GameCard';
 import './App.css';
-import stevenuniverselogo from './images/stevenuniverselogo.png'
+import stevenuniverselogo from '../assests/stevenuniverselogo.png'
 
 
 
@@ -109,7 +109,7 @@ function App() {
       <div className="container">
       {cards.map((card, index) => {
           return (
-            <Card
+            <GameCard
               key={index}
               card={card}
               index={index}
