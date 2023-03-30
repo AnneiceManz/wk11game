@@ -1,5 +1,6 @@
 import React from "react";
 import stevensShirt from "../assets/stevensShirt";
+import '../Card.css'
 
 const GameCard = ({
   onClick,
