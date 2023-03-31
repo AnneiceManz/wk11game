@@ -7,6 +7,7 @@ const IMAGES = {
     lion : new URL ('../images/lion.png', import.meta.url).href,
     stevensShirt : new URL ('../images/stevensShirt.jpeg', import.meta.url).href,
     stevenuniverselogo : new URL ('../images/stevenuniverselogo.png', import.meta.url).href,
+    rosegem: new URL ('../images/NewRoseGem1.png', import.meta.url).href
 }
 
 export default IMAGES

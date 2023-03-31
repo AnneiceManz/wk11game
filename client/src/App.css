@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
 .bold {
   font-weight: 600px;
   text-transform: uppercase;
@@ -34,6 +36,11 @@ button {
   width: 324px;
   text-align: center;
   margin: 0 auto;
+}
+
+.scoreheader {
+  text-align: center;
+  font-family: 'Gruppo', cursive !important;
 }
 
 .App footer {

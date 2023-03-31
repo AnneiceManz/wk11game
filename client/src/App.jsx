@@ -4,6 +4,7 @@ import ShuffleCards from './components/Shuffle';
 import GameCard from './components/GameCard';
 import './App.css';
 import IMAGES from './components/images';
+import Scoreboard from './components/Scoreboard';
 
 
 
@@ -132,6 +133,7 @@ function App() {
               </div>
           )}
         </div>
+        <Scoreboard />
         <div className='restart'>
           <button onClick={handleRestart}>Restart</button>
         </div>
