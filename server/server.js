@@ -47,7 +47,7 @@ app.post('/api/scoreboard', async (req, res) => {
 });
 
 // delete request for students
-app.delete('/api/students/:player_id', async (req, res) => {
+app.delete('/api/scoreboard/:player_id', async (req, res) => {
     try {
         const player_id = req.params.player_id;
         await db.query('DELETE FROM scoreboard WHERE player_id=$1', [player_id]);

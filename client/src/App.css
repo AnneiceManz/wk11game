@@ -19,7 +19,6 @@ button {
   font-family: 'Gruppo', cursive;
   position: absolute;
   width: 100%;
-  height: 100%;
 }
 
 .App header {
@@ -82,4 +81,13 @@ button {
   height: 300px;
   perspective: 100%;
   max-width: 720px;
+}
+
+.scoreboardDiv {
+  width: 500px;
+  position: relative;
+  margin: 0 auto;
+  padding: 10px 4px;
+  margin-top: 10px;
+  font-size: 18px;
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { List, Card, Image } from "semantic-ui-react";
+import { Item, List, Card, Image, Icon, Grid, Header } from "semantic-ui-react";
 import IMAGES from "./images";
 
 const Scoreboard = () => {
@@ -18,30 +18,54 @@ const Scoreboard = () => {
     loadScores();
   }, [scores]);
 
+  const deleteScore = (scores) => {
+    return fetch(`http://localhost:8080/api/scoreboard/${scores.player_id}`, {
+      method: "DELETE",
+    }).then((response) => {
+      //console.log(response);
+      if (response.ok) {
+        loadScores();
+      }
+    });
+  };
+
   return (
-    <Card color="blue" centered>
-      <Card.Content>
-        <Card.Header className="scoreheader">Scoreboard</Card.Header>
-      </Card.Content>
-      <Card.Content>
-        <List divided relaxed='very'>
-          {scores.map((score) => {
-            return (
-              <List.Item>
-                <Image avatar src={IMAGES.rosegem} />
-                <List.Content>
-                  <List.Header key={score.player_id}>
-                    Gamer: <span>{score.gamertag}</span>
-                    <br />
-                    Score: <span> {score.score}</span>
-                  </List.Header>
-                </List.Content>
-              </List.Item>
-            );
-          })}
-        </List>
-      </Card.Content>
-    </Card>
+    <div className="scoreboardDiv">
+      <Header className="scoreheader">Scoreboard</Header>
+      <Grid celled='internally' columns={3} centered>
+        {scores.map((score) => {
+          return (
+            <Grid.Row key={score.player_id}>
+              <Grid.Column width={2}>
+                <Icon
+                circular
+                inverted
+                  name="gamepad"
+                  color="yellow"
+                  src={IMAGES.rosegem}
+                />
+              </Grid.Column>
+              <Grid.Column width={9} textAlign='center'>
+                Gamer: <span>{score.gamertag}</span> | Score:{" "}
+                <span> {score.score}</span>
+              </Grid.Column>
+              <Grid.Column width={2}>
+                <Icon
+                  circular
+                  inverted
+                  color="blue"
+                  name="erase"
+                  size="small"
+                  onClick={() => {
+                    deleteScore(score);
+                  }}
+                />
+              </Grid.Column>
+            </Grid.Row>
+          );
+        })}
+      </Grid>
+    </div>
   );
 };
 
