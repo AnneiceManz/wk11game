@@ -100,7 +100,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={IMAGES.stevenuniverselogo}alt="steven universe logo" width="200px"/>
+        <img src={IMAGES.stevenuniverselogo}alt="steven universe logo" width="300px"/>
         <h3>Play the Card Matching Game</h3>
         <div>
           Find two matching cards to make them vanish.
