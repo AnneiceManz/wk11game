@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { Button } from 'semantic-ui-react'
 import CardsArray from "./components/CardsArray";
 import ShuffleCards from "./components/Shuffle";
 import GameCard from "./components/GameCard";
@@ -134,7 +135,7 @@ function App() {
           )}
         </div>
       <div className="restart">
-        <button onClick={handleRestart}>Restart</button>
+        <Button color="yellow" onClick={handleRestart}>Restart</Button>
       </div>
       </footer>
       <div>

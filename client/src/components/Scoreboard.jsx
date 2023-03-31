@@ -32,7 +32,7 @@ const Scoreboard = () => {
   return (
     <div className="scoreboardDiv">
       <Header className="scoreheader">Scoreboard</Header>
-      <Grid celled="internally" columns={2} centered>
+      <Grid celled="internally" centered>
         {scores.map((score) => {
           return (
             <Grid.Row key={score.player_id}>
@@ -40,7 +40,7 @@ const Scoreboard = () => {
                 Gamer: <span>{score.gamertag}</span> | Score:{" "}
                 <span> {score.score}</span>
               </Grid.Column>
-              <Grid.Column width={2}>
+              <Grid.Column width={1}>
                 <Icon
                   circular
                   inverted
