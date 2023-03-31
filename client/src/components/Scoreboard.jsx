@@ -7,7 +7,7 @@ const Scoreboard = () => {
 
   const loadScores = () => {
     // A function to fetch the list of students that will be load anytime that list change
-    fetch("http://localhost:8080/api/scoreboard")
+    fetch("http://localhost:8081/api/scoreboard")
       .then((response) => response.json())
       .then((scores) => {
         setScores(scores);
@@ -19,7 +19,7 @@ const Scoreboard = () => {
   }, [scores]);
 
   const deleteScore = (scores) => {
-    return fetch(`http://localhost:8080/api/scoreboard/${scores.player_id}`, {
+    return fetch(`http://localhost:8081/api/scoreboard/${scores.player_id}`, {
       method: "DELETE",
     }).then((response) => {
       //console.log(response);

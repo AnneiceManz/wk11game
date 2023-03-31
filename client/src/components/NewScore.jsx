@@ -29,7 +29,7 @@ const NewScore = (props) => {
     e.preventDefault();
     try {
       const body = state;
-      const response = await fetch("http://localhost:8080/api/scoreboard", {
+      const response = await fetch("http://localhost:8081/api/scoreboard", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
