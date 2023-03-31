@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 // create the get request for scores in the endpoint '/api/scoreboard'
 app.get('/api/scoreboard', async (req, res) => {
     try {
-        const { rows: scoreboard } = await db.query('SELECT * FROM scoreboard');
+        const { rows: scoreboard } = await db.query('SELECT * FROM scoreboard ORDER BY score DESC');
         res.send(scoreboard);
     } catch (e) {
         return res.status(400).json({ e });
@@ -46,7 +46,7 @@ app.post('/api/scoreboard', async (req, res) => {
 
 });
 
-// delete request for students
+// delete request for player score
 app.delete('/api/scoreboard/:player_id', async (req, res) => {
     try {
         const player_id = req.params.player_id;
