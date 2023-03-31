@@ -5,10 +5,11 @@ import GameCard from './components/GameCard';
 import './App.css';
 import IMAGES from './components/images';
 import Scoreboard from './components/Scoreboard';
+import NewScore from './components/NewScore';
 
 
 
-function App() {
+function App({onOpen}) {
   const [cards, setCards] = useState(() =>
   ShuffleCards(CardsArray.concat(CardsArray))
   );
@@ -16,7 +17,7 @@ function App() {
   const [clearedCards, setClearedCards] = useState({});
   const [shouldDisableAllCards, setShouldDisableAllCards] = useState(false);
   const [moves, setMoves] = useState(0);
-  // const [showModal, setShowModal] =useState(false);
+  const [showModal, setShowModal] =useState(false);
   const [bestScore, setBestScore] = useState(
     JSON.parse(localStorage.getItem("bestScore")) || Number.POSITIVE_INFINITY
   );
@@ -32,7 +33,7 @@ function App() {
 
   const checkCompletion = () => {
     if (Object.keys(clearedCards).length=== CardsArray.length) {
-      // setShowModal(true);
+      setShowModal(true);
       const highScore = Math.min(moves, bestScore);
       setBestScore(highScore);
       localStorage.setItem("bestScore", highScore);
@@ -134,6 +135,11 @@ function App() {
           )}
         </div>
         <Scoreboard />
+        <NewScore 
+        newScore={moves}
+        setShowModal={setShowModal}
+        showModal={showModal}
+         />
         <div className='restart'>
           <button onClick={handleRestart}>Restart</button>
         </div>
