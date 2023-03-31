@@ -32,19 +32,11 @@ const Scoreboard = () => {
   return (
     <div className="scoreboardDiv">
       <Header className="scoreheader">Scoreboard</Header>
-      <Grid celled='internally' columns={3} centered>
+      <Grid celled="internally" columns={2} centered>
         {scores.map((score) => {
           return (
             <Grid.Row key={score.player_id}>
-              <Grid.Column width={2}>
-                <Icon
-                circular
-                inverted
-                  name="gamepad"
-                  color="yellow"
-                />
-              </Grid.Column>
-              <Grid.Column width={9} textAlign='center'>
+              <Grid.Column width={9} textAlign="center">
                 Gamer: <span>{score.gamertag}</span> | Score:{" "}
                 <span> {score.score}</span>
               </Grid.Column>
