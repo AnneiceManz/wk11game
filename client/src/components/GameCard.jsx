@@ -24,7 +24,7 @@ const GameCard = ({
       onClick={handleClick}
     >
       <div className="card-face card-front-face">
-        <img src={IMAGES.stevensShirt} alt="stevens star shirt" />
+        <img src={IMAGES.hamiltonStar} alt="stevens star shirt" />
       </div>
       <div className="card-face card-back-face">
         <img src={card.image} alt="" />

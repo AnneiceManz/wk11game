@@ -100,12 +100,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img
-          src={IMAGES.stevenuniverselogo}
+          src={IMAGES.hamiltonLogo}
           alt="steven universe logo"
-          width="300px"
+          width="500px"
         />
-        <h3>Play the Card Matching Game</h3>
-        <div>Find two matching cards to make them vanish.</div>
+        <h2>Play the Card Matching Game</h2>
+        <p>Find two matching cards to make them vanish.</p>
       </header>
       <div className="container">
         {cards.map((card, index) => {
@@ -125,11 +125,11 @@ function App() {
       <footer>
         <div className="score">
           <div className="moves">
-            <span className="bold">Moves:</span> {moves}
+            <span className="bold">Moves: {moves}</span> 
           </div>
           {localStorage.getItem("bestScore") && (
             <div className="high-score">
-              <span className="bold">Best Score:</span> {bestScore}
+              <span className="bold">Best Score: {bestScore}</span> 
             </div>
           )}
         </div>

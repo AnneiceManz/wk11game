@@ -1,13 +1,13 @@
 const IMAGES = {
-    amethyst : new URL ('../images/amethyst.png', import.meta.url).href,
-    garnet : new URL ('../images/garnet.png', import.meta.url).href,
-    pearl : new URL ('../images/pearl.png', import.meta.url).href,
-    steven : new URL ('../images/steven.png', import.meta.url).href,
-    rose_quartz : new URL ('../images/rose_quartz.png', import.meta.url).href,
-    lion : new URL ('../images/lion.png', import.meta.url).href,
-    stevensShirt : new URL ('../images/stevensShirt.jpeg', import.meta.url).href,
-    stevenuniverselogo : new URL ('../images/stevenuniverselogo.png', import.meta.url).href,
-    rosegem: new URL ('../images/NewRoseGem1.png', import.meta.url).href
+    aaronburr : new URL ('../images/aaronburr.png', import.meta.url).href,
+    group : new URL ('../images/group.png', import.meta.url).href,
+    hamilton : new URL ('../images/hamilton.png', import.meta.url).href,
+    king : new URL ('../images/king.png', import.meta.url).href,
+    riseUp : new URL ('../images/riseUp.png', import.meta.url).href,
+    sisters : new URL ('../images/sisters.png', import.meta.url).href,
+    hamiltonStar : new URL ('../images/hamiltonStar.png', import.meta.url).href,
+    hamiltonLogo : new URL ('../images/hamilton-logo.png', import.meta.url).href,
+    wallpaper: new URL ('../images/wallpaper1.jpeg', import.meta.url).href,
 }
 
 export default IMAGES

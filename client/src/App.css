@@ -1,24 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 
 .bold {
   font-weight: 600px;
   text-transform: uppercase;
+  color: rgb(0, 0, 0);
 }
 
 button {
   background-color: gold;
   font-weight: bold;
   font-size: 18px;
-  color: darkred;
+  color: rgb(25, 17, 84);
   width: 100px;
   height: 30px;
   border-radius: 20px;
 }
 
 .App {
-  font-family: 'Gruppo', cursive;
+  background-image: url('https://img.freepik.com/premium-photo/vintage-old-brown-paper-texture-background-kraft-paper-horizontal-with-unique-design-paper-soft-natural-paper-style-aesthetic-creative-design_364465-124.jpg');
+  background-position: center;
+  background-size: cover;
+  font-family: "Gruppo", cursive;
   position: absolute;
   width: 100%;
+  height: 100%;
 }
 
 .App header {
@@ -27,7 +32,6 @@ button {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 8px;
-  font-size: 26px;
 }
 
 .App header div {
@@ -37,9 +41,13 @@ button {
   margin: 0 auto;
 }
 
+p {
+  font-size: 1.75rem;
+}
+
 .scoreheader {
   text-align: center;
-  font-family: 'Gruppo', cursive !important;
+  font-family: "Gruppo", cursive !important;
 }
 
 .App footer {
@@ -67,9 +75,10 @@ button {
 }
 
 .container {
-  border: 1px solid #DEDEDE;
+  background-color: rgba(255, 255, 255, 0.582);
+  border: 3px solid #141680;
   padding: 12px;
-  box-shadow: 0 0 4px 4px #DEDEDE;
+  box-shadow: 0 0 4px 4px #141313;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -77,8 +86,8 @@ button {
   align-items: stretch;
   gap: 1rem;
   margin: 0 auto;
-  width: 360px;
-  height: 300px;
+  width: 460px;
+  height: 400px;
   perspective: 100%;
   max-width: 720px;
 }

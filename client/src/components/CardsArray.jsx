@@ -3,28 +3,28 @@ import IMAGES from './images'
 
 const CardsArray = [
   {
-    type: "Amethyst",
-    image: IMAGES.amethyst,
+    type: "AarronBurr",
+    image: IMAGES.aaronburr,
   },
   {
-    type: "Garnet",
-    image: IMAGES.garnet,
+    type: "Group",
+    image: IMAGES.group,
   },
   {
-    type: "Pearl",
-    image: IMAGES.pearl,
+    type: "Hamilton",
+    image: IMAGES.hamilton,
   },
   {
-    type: "Steven",
-    image: IMAGES.steven,
+    type: "King",
+    image: IMAGES.king,
   },
   {
-    type: "Rose Quartz",
-    image: IMAGES.rose_quartz,
+    type: "RiseUp",
+    image: IMAGES.riseUp,
   },
   {
-    type: "Lion",
-    image: IMAGES.lion,
+    type: "Sisters",
+    image: IMAGES.sisters,
   },
 ];
 

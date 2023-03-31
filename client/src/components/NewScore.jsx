@@ -77,7 +77,7 @@ const NewScore = (props) => {
             readOnly
           />
         <br />
-        <Button fluid type='submit' color="blue" id="submitScore">
+        <Button fluid type='submit' color="yellow" id="submitScore">
           Submit
         </Button>
         </Form>

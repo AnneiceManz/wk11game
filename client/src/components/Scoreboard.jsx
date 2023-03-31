@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Item, List, Card, Image, Icon, Grid, Header } from "semantic-ui-react";
+import { Icon, Grid, Header } from "semantic-ui-react";
 import IMAGES from "./images";
 
 const Scoreboard = () => {
@@ -42,7 +42,6 @@ const Scoreboard = () => {
                 inverted
                   name="gamepad"
                   color="yellow"
-                  src={IMAGES.rosegem}
                 />
               </Grid.Column>
               <Grid.Column width={9} textAlign='center'>
