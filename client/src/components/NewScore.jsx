@@ -41,9 +41,11 @@ const NewScore = (props) => {
     }
   };
 
+  state.score=props.newScore
   //   const [showModal, setShowModal] = useState(false);
 
   return (
+
     <Modal
       onClose={() => props.setShowModal(false)}
       onOpen={() => props.setShowModal(true)}
@@ -71,11 +73,8 @@ const NewScore = (props) => {
           <Form.Input
             label="Score"
             type="text"
-            value={props.newScore}
+            value={state.score}
             readOnly
-            onChange={(e) => {
-              dispatch({ type: "editScore", value: e.target.value });
-            }}
           />
         <br />
         <Button fluid type='submit' color="blue" id="submitScore">

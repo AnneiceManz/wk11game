@@ -9,7 +9,7 @@ import NewScore from './components/NewScore';
 
 
 
-function App({onOpen}) {
+function App() {
   const [cards, setCards] = useState(() =>
   ShuffleCards(CardsArray.concat(CardsArray))
   );
