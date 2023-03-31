@@ -26,6 +26,22 @@ const CardsArray = [
     type: "Sisters",
     image: IMAGES.sisters,
   },
+  {
+    type: "Eliza",
+    image: IMAGES.eliza,
+  },
+  {
+    type: "Farmer",
+    image: IMAGES.farmer,
+  },
+  {
+    type: "GroupStar",
+    image: IMAGES.groupStar,
+  },
+  {
+    type: "TJ",
+    image: IMAGES.tj,
+  },
 ];
 
 export default CardsArray;
