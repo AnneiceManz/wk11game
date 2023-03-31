@@ -1,9 +1,9 @@
 import React, { useState, useReducer } from "react";
-import { Portal, Form, Button, Segment, Modal } from "semantic-ui-react";
+import { Form, Button, Modal } from "semantic-ui-react";
 
 const initialState = {
   gamertag: "",
-  score: "",
+  score: null,
 };
 
 function reducer(state, action) {
@@ -41,58 +41,48 @@ const NewScore = (props) => {
     }
   };
 
-//   const [showModal, setShowModal] = useState(false);
+  //   const [showModal, setShowModal] = useState(false);
 
   return (
     <Modal
-    onClose={() => props.setShowModal(false)}
-    onOpen={() => props.setShowModal(true)} 
-    open={props.showModal}
-    size='mini'
-    >
-        <Modal.Content>
-            <Modal.Header as='h2'>
-                Good Game! Add your socre!
-            </Modal.Header>
-        </Modal.Content>
-<Modal.Content>
-
-      <Form
-        id="userSubmission"
-        action="#userSubmission"
-        onSubmit={onSubmitForm}
-      >
-        <Form.Input
-          required
-          label="Gamertag"
-          type="text"
-          value={state.gamertag}
-          onChange={(e) => {
-            dispatch({ type: "editGamertag", value: e.target.value });
-          }}
-        />
-        <Form.Input
-          label="Score"
-          type="text"
-          value={props.newScore}
-          readOnly
-          onChange={(e) => {
-            dispatch({ type: "editScore", value: e.target.value });
-          }}
-        />
-      </Form>
-      <br />
-      <Button
-      fluid
+      onClose={() => props.setShowModal(false)}
+      onOpen={() => props.setShowModal(true)}
+      open={props.showModal}
       size="mini"
-      color="blue"
-      id='submitScore'
-      >
-        Submit
+    >
+      <Modal.Content>
+        <Modal.Header as="h2">Good Game! Add your socre!</Modal.Header>
+      </Modal.Content>
+      <Modal.Content>
+        <Form
+          id="userSubmission"
+          action="#userSubmission"
+          onSubmit={onSubmitForm}
+        >
+          <Form.Input
+            required
+            label="Gamertag"
+            type="text"
+            value={state.gamertag}
+            onChange={(e) => {
+              dispatch({ type: "editGamertag", value: e.target.value });
+            }}
+          />
+          <Form.Input
+            label="Score"
+            type="text"
+            value={props.newScore}
+            readOnly
+            onChange={(e) => {
+              dispatch({ type: "editScore", value: e.target.value });
+            }}
+          />
+        <br />
+        <Button fluid type='submit' color="blue" id="submitScore">
+          Submit
         </Button>
-</Modal.Content>
-
-
+        </Form>
+      </Modal.Content>
     </Modal>
   );
 };
