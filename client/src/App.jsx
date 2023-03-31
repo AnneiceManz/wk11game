@@ -3,7 +3,7 @@ import CardsArray from './components/CardsArray';
 import ShuffleCards from './components/Shuffle';
 import GameCard from './components/GameCard';
 import './App.css';
-import stevenuniverselogo from '../assests/stevenuniverselogo.png'
+import IMAGES from './components/images';
 
 
 
@@ -100,7 +100,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={stevenuniverselogo}alt="steven universe logo" width="200px"/>
+        <img src={IMAGES.stevenuniverselogo}alt="steven universe logo" width="200px"/>
         <h3>Play the Card Matching Game</h3>
         <div>
           Find two matching cards to make them vanish.

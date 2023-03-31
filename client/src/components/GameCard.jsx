@@ -1,6 +1,7 @@
 import React from "react";
-import stevensShirt from "../assets/stevensShirt";
+import IMAGES from "./images";
 import '../Card.css'
+import classnames from 'classnames'
 
 const GameCard = ({
   onClick,
@@ -23,7 +24,7 @@ const GameCard = ({
       onClick={handleClick}
     >
       <div className="card-face card-front-face">
-        <img src={stevensShirt} alt="stevens star shirt" />
+        <img src={IMAGES.stevensShirt} alt="stevens star shirt" />
       </div>
       <div className="card-face card-back-face">
         <img src={card.image} alt="" />
